@@ -1,0 +1,2 @@
+5bb12029c1f32db0c509dced552fa02d  i2c_rs232_pintest
+930d828103f97ff759dd549c9b48c61f  i2ctalk

@@ -1,0 +1,2 @@
+952e3f586f21af3c63047eac9e34a84d  i2c_rs232_pintest.exe
+2b20aeb090b2a3cbcf7ee3acd8d60f15  i2ctalk.exe

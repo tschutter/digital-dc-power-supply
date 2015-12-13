@@ -1,0 +1,12 @@
+# to compile netlist and layout for pcb run the command:
+# gsch2pcb powersupply.project
+#
+schematics powersupply_upd.sch
+#
+elements-dir /usr/local/pcb/share/pcb/newlib
+#
+m4-pcbdir   /usr/local/pcb/share/pcb/m4
+# 
+elements-dir /usr/local/pcb/gsch2pcb_addonlibs/pcb-elements
+#
+output-name powersupply
