@@ -19,12 +19,18 @@ hardware version 1.0 which is documented at `linuxfocus.org
 updated since 2005-12-09, which is why I have collected all relevant
 files and documentation here:
 
-* `Part 1: The Hardware (article 379) <doc/lf-2005_06-0379.pdf>`_
-* `Part 2: The Software (article 383) <doc/lf-2005_07-0384.pdf>`_
-* `Part 3: Command and Control from the PC (article 389) <doc/lf-2005_09-0389.pdf>`_
+* `Part 1: The Hardware <doc/lf-2005_06-0379.pdf>`_
+  (`LinuxFocus article 379
+  <http://linuxfocus.org/English/June2005/article379.shtml>`_)
+* `Part 2: The Software <doc/lf-2005_07-0384.pdf>`_
+  (`LinuxFocus article 384
+  <http://linuxfocus.org/English/July2005/article384.shtml>`_)
+* `Part 3: Command and Control from the PC <doc/lf-2005_09-0389.pdf>`_
+  (`LinuxFocus article 389
+  <http://linuxfocus.org/English/September2005/article389.shtml>`_)
 
 `Version 0.4.9 of the software <digitaldcpower-0.4.9/>`_ was
-downloaded from the `article 389 download page
+downloaded from the `LinuxFocus article 389 download page
 <http://linuxfocus.org/common/src2/article389/>`_.
 
 Parts List
