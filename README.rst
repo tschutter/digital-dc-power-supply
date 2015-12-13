@@ -7,13 +7,13 @@ digital DC bench power supply kit that I have built.
 As of 2015-12-12, there are three separate hardware versions.  I have
 hardware version 1.0 which is documented at `linuxfocus.org
 <http://linuxfocus.org/English/Archives/>`_.  That site has not been
-updated since 2005-12-09, which is the primary reason that I have
-collected the documentation here.  The documentation exists as three
-separate articles:
+updated since 2005-12-09, which is why I have collected the
+documentation here.
 
 * `Part 1: The Hardware (article 379) <doc/lf-2005_06-0379.pdf>`_
 * `Part 2: The Software (article 383) <doc/lf-2005_07-0384.pdf>`_
 * `Part 3: Command and Control from the PC (article 389) <doc/lf-2005_09-0389.pdf>`_
+* `Circuit Diagram (upd4) <doc/powersupply_upd4.pdf`_
 
 `Version 0.4.9 of the software <digitaldcpower-0.4.9/>`_ was
 downloaded from the `article 389 download page
