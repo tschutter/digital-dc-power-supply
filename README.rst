@@ -2,7 +2,9 @@ Digital DC Power Supply
 =======================
 
 This repository contains all documentation and files related to the
-digital DC bench power supply kit that I have built.
+digital DC bench power supply kit that I have built.  I purchased the
+kit (including a LCD display and an ATmega8) from tuxgraphics.org in
+October 2006 for |euro| 40.
 
 As of 2015-12-12, there are three separate hardware versions.  I have
 hardware version 1.0 which is documented at `linuxfocus.org
@@ -24,3 +26,7 @@ Related Stuff
 
 * `Hardware version 2.0 <http://tuxgraphics.org/electronics/200707/bench-power-supply-unit.shtml>`_
 * `Hardware version 3.0 <http://www.tuxgraphics.org/electronics/201005/bench-power-supply-v3.shtml>`_
+
+.. reStructuredText definitions
+.. |euro| unicode:: 0x20AC .. copyright sign
+   :rtrim:
