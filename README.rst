@@ -3,8 +3,9 @@ Digital DC Power Supply
 
 This repository contains all documentation and files related to the
 digital DC bench power supply kit that I have built.  I purchased the
-kit (including a LCD display and an ATmega8) from tuxgraphics.org in
-October 2006 for |euro| 40.
+kit (including a LCD display and three `ATmega8
+<http://www.atmel.com/devices/ATMEGA8.aspx>`_ microcontrollers) from
+tuxgraphics.org in October 2006 for |euro| 40.
 
 These documents were delivered with the kit:
 
