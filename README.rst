@@ -16,6 +16,7 @@ documentation here.
 * `Part 2: The Software (article 383) <doc/lf-2005_07-0384.pdf>`_
 * `Part 3: Command and Control from the PC (article 389) <doc/lf-2005_09-0389.pdf>`_
 * `Circuit Diagram (upd4) <doc/powersupply_upd4.pdf>`_
+* `Tuxgraphics LCD display 20x2 characters <doc/tuxgr_20x2.pdf>`_
 
 `Version 0.4.9 of the software <digitaldcpower-0.4.9/>`_ was
 downloaded from the `article 389 download page
