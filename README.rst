@@ -26,6 +26,21 @@ files and documentation here:
 downloaded from the `article 389 download page
 <http://linuxfocus.org/common/src2/article389/>`_.
 
+Parts List
+----------
+
+* `Triad F-192X Power Transformer <http://www.mouser.com/ProductDetail/Triad-Magnetics/F192X/>`_
+
+  * Maximum Power: 48 VA
+  * Primary: 115 V 50/60 Hz
+  * Secondary: 24.0 VCT @ 2.0 Amps
+
+* `Eagle Plastic Devices Enclosure 40UB103 <http://www.mouser.com/ProductDetail/Eagle-Plastic-Devices/40UB103/>`_
+
+  * 134 mm wide
+  * 150 mm deep
+  * 77 mm high
+
 Related Stuff
 -------------
 
