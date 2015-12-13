@@ -33,6 +33,15 @@ files and documentation here:
 downloaded from the `LinuxFocus article 389 download page
 <http://linuxfocus.org/common/src2/article389/>`_.
 
+Modifications
+-------------
+
+* The `Hardware version 2.0
+  <http://tuxgraphics.org/electronics/200707/bench-power-supply-unit.shtml>`_
+  doc suggests soldering a ceramic capacitor in the range of 10nF to
+  100nF directly behind the front output connectors to block HF
+  signals from interfering with the LCD display electronics.
+
 Parts List
 ----------
 
