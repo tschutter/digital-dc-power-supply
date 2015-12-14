@@ -40,13 +40,32 @@ Power Supply Transformer
 
 `Article 379`_ documents two choices when using a transformer and
 rectifier as opposed to a laptop power brick, a 22V 2.5A version and a
-30V 2.0A version.  The article states that the max output voltage
-should be at least 2V lower than the input voltage.
+30V 2.0A version.  The article states that the input voltage (DC to
+CONN6 on the circuit board) should be at least 2V greater than the max
+output voltage.
 
-It appears that I chose the 22V option with a lesser max current of
-2.0A:
+I confused myself with the multiple "input" voltages in this circuit.
+Given a 24V transformer:
 
-* I purchased a 24V 2.0A transformer
+1) The input voltage to the transformer is 115V RMS AC.
+
+2) The input voltage to the rectifier diodes is 24V RMS AC.
+
+3) The input voltage to the reservoir capacitor is a little more
+   complex.  The peak voltage is 24 RMS AC * 1.414 = 33.6V DC.  But
+   the average voltage is more like 24 RMS AC * 0.9 = 21.5V DC.
+
+4) The input voltage at CONN6 on the circuit board is a little harder
+   to determine, but I would guess the average (ripple current)
+   voltage is about 33V DC.  This is dependent upon the value of the
+   reservoir capacitor.
+
+So it appears that I chose the 30V version when I sourced the
+transformer.
+
+But it appears that I chose the 22V version when sourcing the 3000
+|micro| F reservoir capacitor and when assembling the circuit board:
+
 * R10 is 4.7K |ohms|
 * Z1 has been replaced by a wire
 * C7 was not installed
@@ -55,8 +74,8 @@ It appears that I chose the 22V option with a lesser max current of
 22V 2.5A
 ++++++++
 
-* `Article 379`_ specifies a 18V 2.5A transformer (reason: 18 * 1.4 =
-  25V), but I believe this is wrong.
+* `Article 379`_ specifies a 18V 2.5A transformer (reason: 18V AC * 1.4 =
+  25V DC rectified and smoothed)
 * 3000 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
   per ampere)
 * R10 should be 4.7K |ohms|
@@ -66,8 +85,8 @@ It appears that I chose the 22V option with a lesser max current of
 30V 2.0A
 ++++++++
 
-* `Article 379`_ specifies a 24V 2.0A transformer (reason: 24 * 1.4 =
-  33.6V), but I believe this is wrong.
+* `Article 379`_ specifies a 24V 2.0A transformer (reason: 24 AC * 1.4 =
+  33.6V DC rectified and smoothed)
 * 2200 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
   per ampere)
 * R10 should be 5.6K |ohms|
