@@ -55,7 +55,8 @@ It appears that I chose the 22V option with a lesser max current of
 22V 2.5A
 ++++++++
 
-* 18V 2.5A transformer (reason: 18 * 1.4 = 25V) WRONG!
+* `Article 379`_ specifies a 18V 2.5A transformer (reason: 18 * 1.4 =
+  25V), but I believe this is wrong.
 * 3000 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
   per ampere)
 * R10 should be 4.7K |ohms|
@@ -65,7 +66,8 @@ It appears that I chose the 22V option with a lesser max current of
 30V 2.0A
 ++++++++
 
-* 24V 2.0A transformer (reason: 24 * 1.4 = 33.6V) WRONG!
+* `Article 379`_ specifies a 24V 2.0A transformer (reason: 24 * 1.4 =
+  33.6V), but I believe this is wrong.
 * 2200 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
   per ampere)
 * R10 should be 5.6K |ohms|
