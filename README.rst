@@ -76,6 +76,9 @@ It appears that I chose the 22V option with a lesser max current of
 Primary Fuse
 ------------
 
+None of the kit documentation indicated the need for a fuse, but it
+sounded like a good idea.
+
 * Choosing the fuse rating is notoriously difficult.
 * The fuse should come *before* the switch.  This guards against the
   possibility of the switch failing closed.
