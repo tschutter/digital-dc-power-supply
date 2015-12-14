@@ -29,8 +29,8 @@ files and documentation here:
   (LinuxFocus `article 389`_)
   (`local copy of 389 <doc/lf-2005_09-0389.pdf>`_)
 
-Build Decisions
-===============
+Build Notes and Decisions
+=========================
 
 The 1.0 kit documentation left many choices unclear or up to the
 reader.
@@ -129,6 +129,51 @@ The `Hardware version 2.0
 doc suggests soldering a ceramic capacitor in the range of 10 nF to
 100 nF directly behind the front output connectors to block HF signals
 from interfering with the LCD display electronics.
+
+Connections
+-----------
+
+There are 6 sets of external connections on the main PCB labeled CONN1
+through CONN6.
+
+* CONN1 - I dunno
+
+  * Pin 1:
+  * Pin 2:
+  * Pin 3:
+  * Pin 4:
+  * Pin 5:
+
+* CONN2 - I2C communication to PC (DB9 serial)
+
+  * Pin 1: RTS=7
+  * Pin 2: CD=1
+  * Pin 3: DTR=4
+  * Pin 4: GND=5
+
+* CONN3 - LCD Display
+
+  * 10 pins
+
+* CONN4 - DC Power Out
+
+  * Pin 1: DC Power Out -
+  * Pin 2: DC Power Out +
+
+* CONN5 - Front Panel Switches
+
+  * Pin 1: S1 Voltage +
+  * Pin 2: S2 Voltage -
+  * Pin 3: S3 Current +, S5 Store
+  * Pin 4: S4 Current -
+  * Pin 5: S[1-4] Current and voltage common
+  * Pin 6: S5 Store
+
+* CONN6 - DC Power In
+
+  * Pin 1: DC Power In +
+  * Pin 2: DC Power In Ground
+  * Pin 3: DC Power In -
 
 Parts List
 ==========
