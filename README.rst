@@ -73,20 +73,21 @@ It appears that I chose the 22V option with a lesser max current of
 * R10 should be 5.6K |ohms|
 * The circuit diagram says: Z1, C7, R35 only for 30V version
 
-Fuse
-----
+Primary Fuse
+------------
 
 * Choosing the fuse rating is notoriously difficult.
-* Various sources indicate that the fuse should come *before* the
-  switch.  This guards against the possibility of the switch failing
-  closed.
-* From `Fuses and Fusing @ The Valve Wizard <http://www.hammondmfg.com/pdf/5c007.pdf>`_:
-  * The fuse should be rated for around 1.5 to 2 times the normal
-    primary operating current. You can work this out by adding up the
-    (maximum average) power used by each of the secondary windings,
-    then divide by the mains voltage.
+* The fuse should come *before* the switch.  This guards against the
+  possibility of the switch failing closed.
+* From `Fuses and Fusing @ The Valve Wizard
+  <http://www.valvewizard.co.uk/fuses.html>`_:
+
+  * The primary fuse should be rated for around 1.5 to 2 times the
+    normal primary operating current. You can work this out by adding
+    up the (maximum average) power used by each of the secondary
+    windings, then divide by the mains voltage.
   * 1A is typical of most amps up to 60W.
-    * Normally, you size to protect the transformer.
+* Normally, you size to protect the transformer.
 
 The transformer rated current = 48VA / 115V = 0.42A.  A slow-blow fuse
 of 1A is 2 times the maximum primary operating current and should
