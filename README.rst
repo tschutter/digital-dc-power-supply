@@ -38,26 +38,38 @@ reader.
 Power Supply Transformer
 ------------------------
 
-`Article 379`_ documents two choices when using a transformer as
-opposed to a laptop power brick, a 22V 2.5A version and a 30V 2.0A
-version.  The article also states that the max output voltage should
-be at least 2V lower than the input voltage.
+`Article 379`_ documents two choices when using a transformer and
+rectifier as opposed to a laptop power brick, a 22V 2.5A version and a
+30V 2.0A version.  The article states that the max output voltage
+should be at least 2V lower than the input voltage.
 
-I chose the 30V 2.0A option.
+It appears that I chose the 22V option with a lesser max current of
+2.0A:
+
+* I purchased a 24V 2.0A transformer
+* R10 is 4.7K |ohms|
+* Z1 has been replaced by a wire
+* C7 was not installed
+* R35 was not installed
 
 22V 2.5A
 ++++++++
 
+* 18V 2.5A transformer (reason: 18 * 1.4 = 25V) WRONG!
+* 3000 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
+  per ampere)
 * R10 should be 4.7K |ohms|
-* 18V 2.5A transformer (reason: 18 * 1.4 = 25V)
-* 3000 |micro| F reservoir capacitor (reason: at least 1000 |micro| F per ampere)
+* The circuit diagram says: replace Z1 by a wire for the 24V version
+  (maybe typo, should be 22V?)
 
 30V 2.0A
 ++++++++
 
+* 24V 2.0A transformer (reason: 24 * 1.4 = 33.6V) WRONG!
+* 2200 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
+  per ampere)
 * R10 should be 5.6K |ohms|
-* 24V 2.0A transformer (reason: 24 * 1.4 = 33.6V)
-* 2200 |micro| F reservoir capacitor (reason: at least 1000 |micro| F per ampere)
+* The circuit diagram says: Z1, C7, R35 only for 30V version
 
 Rectifier
 ---------
@@ -79,7 +91,7 @@ Reservoir Capacitor
 According to `article 379
 <http://linuxfocus.org/English/June2005/article379.shtml>`_, you need
 at least 1000 |micro| F of reservoir capacitor per ampere of input
-current.  Given our 2.0 amp transformer, 2000 |micro| F should be
+current.  Given the 2.0 amp transformer, 2000 |micro| F should be
 sufficient, but I have used a 3300 |micro| F capacitor.  This is
 connected directly to the output of the rectifier, minding the
 polarity.
