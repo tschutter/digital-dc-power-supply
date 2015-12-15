@@ -140,6 +140,16 @@ sufficient, but I have used a 3300 |micro| F capacitor.  This is
 connected directly to the output of the rectifier, minding the
 polarity.
 
+For a full-wave rectifier the peak-to-peak `ripple voltage
+<https://en.wikipedia.org/wiki/Ripple_(electrical)>`_ can be
+calculated as:
+
+    :math:`V_{pp} = \frac{I}{2fC}`
+
+The frequency is 60Hz, so at the maximum current draw of 20A, a 3300
+|micro| F capacitor results in a peak-to-peak ripple voltage of 5.5V.
+This is higher than I would expect, but apparently it works.
+
 HF Interference
 ---------------
 
@@ -231,6 +241,7 @@ Related Stuff
 * `Hardware version 2.0 <http://tuxgraphics.org/electronics/200707/bench-power-supply-unit.shtml>`_
 * `Hardware version 3.0 <http://www.tuxgraphics.org/electronics/201005/bench-power-supply-v3.shtml>`_
 * `Design Guide for Rectifier Use <http://www.hammondmfg.com/pdf/5c007.pdf>`_
+* `Power Supply Basics for Effects <http://www.geofex.com/Article_Folders/Power-supplies/powersup.htm>`_
 
 .. reStructuredText definitions
 .. |euro| unicode:: 0x20AC .. copyright sign
