@@ -198,8 +198,14 @@ through CONN6.
   * Pin 2: DC Power In Ground
   * Pin 3: DC Power In -
 
-Parts List
-==========
+Additional Parts List
+=====================
+
+* IEC 60320 C14 female connector (power socket) ripped from old computer PSU
+
+* fuse holder and 1A slow-blow fuse
+
+* power switch ripped from old computer PSU
 
 * `Triad F-192X Power Transformer <http://www.mouser.com/ProductDetail/Triad-Magnetics/F192X/>`_
 
@@ -215,6 +221,12 @@ Parts List
   * Max. Forward Voltage Drop, V_F = 1.0V @ I_F = 2.5A
 
 * 3300 |micro| F capacitor (reservoir for rectifier bridge)
+
+* large heat sink
+
+* double binding posts (for banana jacks)
+
+* 1 female D-Sub DE-9 serial connector
 
 * `Eagle Plastic Devices Enclosure 40UB103 <http://www.mouser.com/ProductDetail/Eagle-Plastic-Devices/40UB103/>`_
 
