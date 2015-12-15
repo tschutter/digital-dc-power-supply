@@ -55,6 +55,13 @@ output voltage.
 Choosing the transformer
 ++++++++++++++++++++++++
 
+I chose a `Triad F-192X Power Transformer
+<http://www.mouser.com/ProductDetail/Triad-Magnetics/F192X/>`_
+
+* Maximum Power: 48VA
+* Primary: 115V 50/60Hz
+* Secondary: 24.0VCT @ 2.0A
+
 I confused myself with the multiple "input" voltages in this circuit.
 Given a 24V transformer:
 
@@ -117,6 +124,7 @@ Rectifier
 
 I sourced a 10PH40 rectifier pack:
 
+* Single Phase, Full Wave Bridge
 * Rated voltage: 400 V
 * Output current: 10 A
 * Max. forward voltage drop, |V_F| = 1.0 V @ |I_F| = 2.5 A
@@ -160,68 +168,96 @@ Connections
 There are 6 sets of external connections on the main PCB labeled CONN1
 through CONN6.
 
-* CONN1 - I dunno
+CONN1
++++++
 
-  * Pin 1:
-  * Pin 2:
-  * Pin 3:
-  * Pin 4:
-  * Pin 5:
+`SPI`_ programming interface to the ATMega8
 
-* CONN2 - I2C communication to PC (DB9 serial)
+=== ==== ===========
+Pin Name ATMega8 Pin
+=== ==== ===========
+  1 RST  PC6 (1)
+  2 MOSI PB3 (17)
+  3 MISO PB4 (18)
+  4 SCK  PB5 (19)
+  5 GND  N/A
+=== ==== ===========
 
-  * Pin 1: RTS=7
-  * Pin 2: CD=1
-  * Pin 3: DTR=4
-  * Pin 4: GND=5
+CONN2
++++++
 
-* CONN3 - LCD Display
+I2C (serial) communication to PC
 
-  * 10 pins
+=== ==== =======
+Pin Name DB9 Pin
+=== ==== =======
+  1 RTS  7
+  2 CD   1
+  3 DTR  4
+  4 GND  5
+=== ==== =======
 
-* CONN4 - DC Power Out
+CONN3
++++++
 
-  * Pin 1: DC Power Out -
-  * Pin 2: DC Power Out +
+LCD Display (10 pins)
 
-* CONN5 - Front Panel Switches
+CONN4
++++++
 
-  * Pin 1: S1 Voltage +
-  * Pin 2: S2 Voltage -
-  * Pin 3: S3 Current +, S5 Store
-  * Pin 4: S4 Current -
-  * Pin 5: S[1-4] Current and voltage common
-  * Pin 6: S5 Store
+DC Power Out
 
-* CONN6 - DC Power In
+=== ==============
+Pin Name
+=== ==============
+  1 Negative
+  2 Positive
+=== ==============
 
-  * Pin 1: DC Power In +
-  * Pin 2: DC Power In Ground
-  * Pin 3: DC Power In -
+CONN5
++++++
 
-Additional Parts List
-=====================
+Front Panel Switches
+
+=== ======================
+Pin Use
+=== ======================
+  1 S1 Voltage +
+  2 S2 Voltage -
+  3 S3 Current +, S5 Store
+  4 S4 Current -
+  5 S[1-4] Common
+  6 S5 Store
+=== ======================
+
+CONN6
++++++
+
+DC Power In
+
+=== ========
+Pin Name
+=== ========
+  1 Positive
+  2 Ground
+  3 Negative
+=== ========
+
+Front Panel Labels
+------------------
+
+For voltage, 'U' seems to be the European preference and 'V' the
+preference in the U.S..  Therefore I chose 'V' for the front panel
+labels.
+
+Additional Parts
+================
 
 * IEC 60320 C14 female connector (power socket) ripped from old computer PSU
 
 * fuse holder and 1A slow-blow fuse
 
 * power switch ripped from old computer PSU
-
-* `Triad F-192X Power Transformer <http://www.mouser.com/ProductDetail/Triad-Magnetics/F192X/>`_
-
-  * Maximum Power: 48VA
-  * Primary: 115V 50/60Hz
-  * Secondary: 24.0VCT @ 2.0A
-
-* 10PH40 Rectifier Pack
-
-  * Single Phase, Full Wave Bridge
-  * Rated Voltage: 400V
-  * Output Current: 10A
-  * Max. Forward Voltage Drop, V_F = 1.0V @ I_F = 2.5A
-
-* 3300 |micro| F capacitor (reservoir for rectifier bridge)
 
 * large heat sink
 
@@ -234,6 +270,39 @@ Additional Parts List
   * Width: 134mm
   * Depth: 150mm
   * Height: 77mm
+
+Programming the ATMega8
+=======================
+
+The ATMega8 is programmed using a `SPI`_ (Serial Peripheral Interface).
+
+I purchased the `Sparkfun Pocket AVR Programmer
+<https://www.sparkfun.com/products/9825>`_ which is an USB to SPI host
+adapter.  See the `Pocket AVR Programmer Hookup Guide
+<https://learn.sparkfun.com/tutorials/pocket-avr-programmer-hookup-guide>`_.
+
+One problem is that the power supply circuit board uses a non-standard
+5 pin in-line interface instead of the standard 2x3 header.
+
+I constructed a cable adapter:
+
+==== ======= =======
+Line 2x3 pin 1x5 pin
+==== ======= =======
+MISO       1       3
+5V         2     N/C
+SCK        3       4
+MOSI       4       2
+RST        5       1
+GND        6       5
+==== ======= =======
+
+The 5V (PWR) line is not connected because the ATMega8 gets its 5V
+power from the circuit board.
+
+R3 is a 10K |ohms| pull-up resistor between the RST pin and the
+positive power supply which prevents the ATMega8 from accidentally
+entering programming mode.
 
 Software
 ========
@@ -249,6 +318,7 @@ Related Stuff
 * `Hardware version 3.0 <http://www.tuxgraphics.org/electronics/201005/bench-power-supply-v3.shtml>`_
 * `Design Guide for Rectifier Use <http://www.hammondmfg.com/pdf/5c007.pdf>`_
 * `Power Supply Basics for Effects <http://www.geofex.com/Article_Folders/Power-supplies/powersup.htm>`_
+* `Atmel AVR on Wikipedia <https://en.wikipedia.org/wiki/Atmel_AVR>`_
 
 Local Copies of Critical Docs
 =============================
@@ -281,3 +351,4 @@ These documents were delivered with the kit:
 .. _article 379: http://linuxfocus.org/English/June2005/article379.shtml
 .. _article 384: http://linuxfocus.org/English/July2005/article384.shtml
 .. _article 389: http://linuxfocus.org/English/September2005/article389.shtml
+.. _SPI: https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi
