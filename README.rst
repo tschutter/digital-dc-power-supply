@@ -44,33 +44,6 @@ rectifier as opposed to a laptop power brick, a 22V 2.5A version and a
 CONN6 on the circuit board) should be at least 2V greater than the max
 output voltage.
 
-I confused myself with the multiple "input" voltages in this circuit.
-Given a 24V transformer:
-
-1) The input voltage to the transformer is 115V RMS AC.
-
-2) The input voltage to the rectifier diodes is 24V RMS AC.
-
-3) The input voltage to the reservoir capacitor is a little more
-   complex.  The peak voltage is 24 RMS AC * 1.414 = 33.6V DC.  But
-   the average voltage is more like 24 RMS AC * 0.9 = 21.5V DC.
-
-4) The input voltage at CONN6 on the circuit board is a little harder
-   to determine, but I would guess the average (ripple current)
-   voltage is about 33V DC.  This is dependent upon the value of the
-   reservoir capacitor.
-
-So it appears that I chose the 30V version when I sourced the
-transformer.
-
-But it appears that I chose the 22V version when sourcing the 3000
-|micro| F reservoir capacitor and when assembling the circuit board:
-
-* R10 is 4.7K |ohms|
-* Z1 has been replaced by a wire
-* C7 was not installed
-* R35 was not installed
-
 22V 2.5A
 ++++++++
 
@@ -91,6 +64,38 @@ But it appears that I chose the 22V version when sourcing the 3000
   per ampere)
 * R10 should be 5.6K |ohms|
 * The circuit diagram says: Z1, C7, R35 only for 30V version
+
+Choosing the transformer
+++++++++++++++++++++++++
+
+I confused myself with the multiple "input" voltages in this circuit.
+Given a 24V transformer:
+
+1) The input voltage to the transformer is 115V RMS AC.
+
+2) The input voltage to the rectifier diodes is 24V RMS AC.
+
+3) The input voltage to the reservoir capacitor is a little more
+   complex.  The peak voltage is 24 RMS AC * 1.414 = 33.6V DC, where
+   1.414 = sqrt(2).  Possibly it should be 1.4V less, due to the drop
+   across two silicon diodes.
+
+4) The input voltage at CONN6 on the circuit board is variable
+   according to the current draw.  At a current draw of 2.0A and a
+   2200 |micro| F reservoir capacitor, the average voltage will be
+   33.6 - 5.5 * 0.5 = 29.8V.
+
+It appears that I chose the 30V version when I sourced the
+transformer, but it seems that I chose the 22V version when sourcing
+the 3300 |micro| F reservoir capacitor.
+
+And it seems that I chose the 22V version when assembling the circuit
+board:
+
+* R10 is 4.7K |ohms|
+* Z1 has been replaced by a wire
+* C7 was not installed
+* R35 was not installed
 
 Primary Fuse
 ------------
@@ -135,18 +140,21 @@ Reservoir Capacitor
 According to `article 379
 <http://linuxfocus.org/English/June2005/article379.shtml>`_, you need
 at least 1000 |micro| F of reservoir capacitor per ampere of input
-current.  Given the 2.0 amp transformer, 2000 |micro| F should be
+current.  Given the 2.0A transformer, 2000 |micro| F should be
 sufficient, but I have used a 3300 |micro| F capacitor.  This is
 connected directly to the output of the rectifier, minding the
 polarity.
 
-For a full-wave rectifier the peak-to-peak `ripple voltage
-<https://en.wikipedia.org/wiki/Ripple_(electrical)>`_ can be
+The reservoir capacitor decreases the peak-to-peak `ripple voltage
+<https://en.wikipedia.org/wiki/Ripple_(electrical)>`_, which *raises*
+the peak voltage.
+
+For a full-wave rectifier the peak-to-peak ripple voltage can be
 calculated as:
 
     :math:`V_{pp} = \frac{I}{2fC}`
 
-The frequency is 60Hz, so at the maximum current draw of 20A, a 3300
+The frequency is 60Hz, so at the maximum current draw of 2.0A, a 3300
 |micro| F capacitor results in a peak-to-peak ripple voltage of 5.5V.
 This is higher than I would expect, but apparently it works.
 
