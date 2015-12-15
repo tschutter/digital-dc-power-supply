@@ -265,6 +265,10 @@ Additional Parts
 
 * 1 female D-Sub DE-9 serial connector
 
+  When the PC serial ports began to use 9-pin connectors, they were
+  often `mislabeled <https://en.wikipedia.org/wiki/D-subminiature>`_
+  as DB-9 instead of DE-9 connectors.
+
 * `Eagle Plastic Devices Enclosure 40UB103 <http://www.mouser.com/ProductDetail/Eagle-Plastic-Devices/40UB103/>`_
 
   * Width: 134mm
