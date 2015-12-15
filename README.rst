@@ -9,7 +9,7 @@ tuxgraphics.org in October 2006 for |euro| 40.
 
 As of 2015-12-12, there are three separate hardware versions.  I have
 hardware version 1.0 which is documented at `linuxfocus.org
-<http://linuxfocus.org/English/Archives/>`_.
+<http://linuxfocus.org/English/Archives/>`_:
 
 * Part 1: The Hardware (LinuxFocus `article 379`_)
 * Part 2: The Software (LinuxFocus `article 384`_)
@@ -188,14 +188,14 @@ CONN2
 
 I2C (serial) communication to PC
 
-=== ==== =======
-Pin Name DB9 Pin
-=== ==== =======
+=== ==== ========
+Pin Name DE-9 Pin
+=== ==== ========
   1 RTS  7
   2 CD   1
   3 DTR  4
   4 GND  5
-=== ==== =======
+=== ==== ========
 
 CONN3
 +++++
