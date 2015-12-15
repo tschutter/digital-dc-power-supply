@@ -7,27 +7,13 @@ kit (including a LCD display and three `ATmega8
 <http://www.atmel.com/devices/ATMEGA8.aspx>`_ microcontrollers) from
 tuxgraphics.org in October 2006 for |euro| 40.
 
-These documents were delivered with the kit:
-
-* `Tuxgraphics Digital DC Power Supply (assembly) <doc/lf-2005_06-0379-assembly.pdf>`_
-* `Circuit Diagram (upd4) <doc/powersupply_upd4.pdf>`_
-* `Tuxgraphics LCD display 20x2 characters datasheet <doc/tuxgr_20x2.pdf>`_
-
 As of 2015-12-12, there are three separate hardware versions.  I have
 hardware version 1.0 which is documented at `linuxfocus.org
-<http://linuxfocus.org/English/Archives/>`_.  That site has not been
-updated since 2005-12-09, which is why I have collected all relevant
-files and documentation here:
+<http://linuxfocus.org/English/Archives/>`_.
 
-* Part 1: The Hardware
-  (LinuxFocus `article 379`_)
-  (`local copy of 379 <doc/lf-2005_06-0379.pdf>`_)
-* Part 2: The Software
-  (LinuxFocus `article 384`_)
-  (`local copy of 384 <doc/lf-2005_07-0384.pdf>`_)
-* Part 3: Command and Control from the PC
-  (LinuxFocus `article 389`_)
-  (`local copy of 389 <doc/lf-2005_09-0389.pdf>`_)
+* Part 1: The Hardware (LinuxFocus `article 379`_)
+* Part 2: The Software (LinuxFocus `article 384`_)
+* Part 3: Command and Control from the PC (LinuxFocus `article 389`_)
 
 Build Notes and Decisions
 =========================
@@ -250,6 +236,22 @@ Related Stuff
 * `Hardware version 3.0 <http://www.tuxgraphics.org/electronics/201005/bench-power-supply-v3.shtml>`_
 * `Design Guide for Rectifier Use <http://www.hammondmfg.com/pdf/5c007.pdf>`_
 * `Power Supply Basics for Effects <http://www.geofex.com/Article_Folders/Power-supplies/powersup.htm>`_
+
+Local Copies of Critical Docs
+=============================
+
+The LinuxFocus site which hosts the original articles has not been
+updated since 2005-12-09, so I have local copies here:
+
+* `Part 1: The Hardware (LinuxFocus article 379) <doc/lf-2005_06-0379.pdf>`_
+* `Part 2: The Software (LinuxFocus article 384) <doc/lf-2005_07-0384.pdf>`_
+* `Part 3: Command and Control from the PC (LinuxFocus article 389) <doc/lf-2005_09-0389.pdf>`_
+
+These documents were delivered with the kit:
+
+* `Tuxgraphics Digital DC Power Supply (assembly) <doc/lf-2005_06-0379-assembly.pdf>`_
+* `Circuit Diagram (upd4) <doc/powersupply_upd4.pdf>`_
+* `Tuxgraphics LCD display 20x2 characters datasheet <doc/tuxgr_20x2.pdf>`_
 
 .. reStructuredText definitions
 .. |euro| unicode:: 0x20AC .. copyright sign
