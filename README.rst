@@ -168,8 +168,8 @@ Connections
 There are 6 sets of external connections on the main PCB labeled CONN1
 through CONN6.
 
-CONN1
-+++++
+CONN1 - PROG_LOAD
++++++++++++++++++
 
 `SPI`_ programming interface to the ATMega8
 
@@ -183,8 +183,8 @@ Pin Name ATMega8 Pin
   5 GND  N/A
 === ==== ===========
 
-CONN2
-+++++
+CONN2 - Remote Control
+++++++++++++++++++++++
 
 I2C (serial) communication to PC
 
@@ -197,15 +197,13 @@ Pin Name DE-9 Pin
   4 GND  5
 === ==== ========
 
-CONN3
-+++++
+CONN3 - LCD
++++++++++++
 
 LCD Display (10 pins)
 
-CONN4
-+++++
-
-DC Power Out
+CONN4 - DC Power Out
+++++++++++++++++++++
 
 === ==============
 Pin Name
@@ -214,10 +212,8 @@ Pin Name
   2 Positive
 === ==============
 
-CONN5
-+++++
-
-Front Panel Switches
+CONN5 - Front Panel
++++++++++++++++++++
 
 === ======================
 Pin Use
@@ -230,10 +226,8 @@ Pin Use
   6 S5 Store
 === ======================
 
-CONN6
-+++++
-
-DC Power In
+CONN6 - DC Power In
++++++++++++++++++++
 
 === ========
 Pin Name
