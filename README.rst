@@ -14,6 +14,7 @@ hardware version 1.0 which is documented at `linuxfocus.org
 * Part 1: The Hardware (LinuxFocus `article 379`_)
 * Part 2: The Software (LinuxFocus `article 384`_)
 * Part 3: Command and Control from the PC (LinuxFocus `article 389`_)
+* Programming the AVR microcontroller with GCC, libc 1.0.4 (LinuxFocus `article 352`_)
 
 Build Notes and Decisions
 =========================
@@ -258,6 +259,7 @@ updated since 2005-12-09, so I have local copies here:
 * `Part 1: The Hardware (LinuxFocus article 379) <doc/lf-2005_06-0379.pdf>`_
 * `Part 2: The Software (LinuxFocus article 384) <doc/lf-2005_07-0384.pdf>`_
 * `Part 3: Command and Control from the PC (LinuxFocus article 389) <doc/lf-2005_09-0389.pdf>`_
+* `Programming the AVR microcontroller with GCC, libc 1.0.4 (LinuxFocus article 352) <doc/lf-2004_11-0352.pdf>`_
 
 These documents were delivered with the kit:
 
@@ -275,6 +277,7 @@ These documents were delivered with the kit:
    :rtrim:
 .. |I_F| replace:: I\ :sub:`F`
 .. |V_F| replace:: V\ :sub:`F`
+.. _article 352: http://linuxfocus.org/English/November2004/article352.shtml
 .. _article 379: http://linuxfocus.org/English/June2005/article379.shtml
 .. _article 384: http://linuxfocus.org/English/July2005/article384.shtml
 .. _article 389: http://linuxfocus.org/English/September2005/article389.shtml
