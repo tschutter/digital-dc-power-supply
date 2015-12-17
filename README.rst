@@ -237,6 +237,22 @@ Pin Name
   3 Negative
 === ========
 
+Enclosure
+---------
+
+The first enclosure that I had turned out to be too small.  You *must*
+actually layout the components before sizing the enclosure.  Finding a
+good, cheap enclosure is a real PITA.  There is no way to specify your
+size ranges and get a list of matching items.  It doesn't help that
+there are no standard naming conventions; enclosure, junction box,
+instrument case, desktop, etc. all mean different things to the Asian
+suppliers.  I eventually found a 195mm x 165mm x 90mm Blue Metal
+Enclosure Case DIY Power Junction Box (uxcell) for `$14 from Amazon
+<http://www.amazon.com/gp/product/B00P37E1YG>`_.  `This one
+<http://www.circuitspecialists.com/metal-instrument-enclosure-la-6.html>`_
+also looked interesting, but with shipping it cost more than twice as
+much.
+
 Front Panel Labels
 ------------------
 
