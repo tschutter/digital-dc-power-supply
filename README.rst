@@ -332,6 +332,7 @@ Related Stuff
 * `Hardware version 3.0 <http://www.tuxgraphics.org/electronics/201005/bench-power-supply-v3.shtml>`_
 * `Design Guide for Rectifier Use <http://www.hammondmfg.com/pdf/5c007.pdf>`_
 * `Power Supply Basics for Effects <http://www.geofex.com/Article_Folders/Power-supplies/powersup.htm>`_
+* `Anatomy of Switching Power Supplies <http://www.hardwaresecrets.com/anatomy-of-switching-power-supplies/>`_
 * `Atmel AVR on Wikipedia <https://en.wikipedia.org/wiki/Atmel_AVR>`_
 
 Local Copies of Critical Docs
