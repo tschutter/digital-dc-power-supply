@@ -49,7 +49,9 @@ output voltage.
   33.6V DC rectified and smoothed)
 * 2200 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
   per ampere)
-* R10 should be 5.6K |ohms|
+* R10 should be 5.6K |ohms|. Note that the circuit diagram shows 6.8K
+  |ohms|, but that appears to be an error given the text in `article
+  379`_.
 * The circuit diagram says: Z1, C7, R35 only for 30V version
 
 Choosing the transformer
