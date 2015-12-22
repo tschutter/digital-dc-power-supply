@@ -242,18 +242,16 @@ Pin Name
 Enclosure
 ---------
 
-The first enclosure that I had turned out to be too small.  You *must*
-actually layout the components before sizing the enclosure.  Finding a
-good, cheap enclosure is a real PITA.  There is no way to specify your
-size ranges and get a list of matching items.  It doesn't help that
-there are no standard naming conventions; enclosure, junction box,
-instrument case, desktop, etc. all mean different things to the Asian
-suppliers.  I eventually found a 195mm x 165mm x 90mm Blue Metal
-Enclosure Case DIY Power Junction Box (uxcell) for `$14 from Amazon
-<http://www.amazon.com/gp/product/B00P37E1YG>`_.  `This one
-<http://www.circuitspecialists.com/metal-instrument-enclosure-la-6.html>`_
-also looked interesting, but with shipping it cost more than twice as
-much.
+When selecting an enclosure, you *must* actually layout the components
+before sizing the enclosure.  Finding a good, cheap enclosure is a
+real PITA.  There is no way to specify your size ranges and get a list
+of matching items.  It doesn't help that there are no standard naming
+conventions; enclosure, junction box, instrument case, desktop,
+etc. all mean different things to the Asian suppliers.
+
+I eventually found `ST764 (7x3x5") DIY Hobby Electronic Metal Project
+Enclosure Box Case <http://www.ebay.com/itm/261615796293>`_ by
+Sunetec.
 
 Front Panel Labels
 ------------------
@@ -284,12 +282,6 @@ Additional Parts
   When the PC serial ports began to use 9-pin connectors, they were
   often `mislabeled <https://en.wikipedia.org/wiki/D-subminiature>`_
   as DB-9 instead of DE-9 connectors.
-
-* `Eagle Plastic Devices Enclosure 40UB103 <http://www.mouser.com/ProductDetail/Eagle-Plastic-Devices/40UB103/>`_
-
-  * Width: 134mm
-  * Depth: 150mm
-  * Height: 77mm
 
 Programming the ATMega8
 =======================
