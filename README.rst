@@ -49,9 +49,17 @@ output voltage.
   33.6V DC rectified and smoothed)
 * 2200 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
   per ampere)
-* R10 should be 5.6K |ohms|. Note that the circuit diagram shows 6.8K
-  |ohms|, but that appears to be an error given the text in `article
-  379`_.
+* R10 should be 6.8K |ohms| as indicated in the circuit diagram.  Note
+  that `article 379`_ states that R10 should be 5.7K |ohms|, but that
+  appears to be an error.  The microcontroller operates at 5V so the
+  maximum output of the DAC is 5V which means that the maximum output
+  voltage behind the power transistor will be 5.0 - 0.7 = 4.3V.  For
+  30V output we must at least amplify the 4.3V by a factor of 7.
+  According to `article 379`_, V\ :sub:`ampl` = (R10 + R11) / R11.
+  Given that R11 is 1.0K |ohms|, then the circuit diagram R10 value of
+  6.8K |ohms| would result in a V\ :sub:`ampl` of 7.8.  Since I don't
+  have a 6.8K |ohms| resistor, I used a 4.7K |ohms| resistor in series
+  with a 2.2K |ohms| resistor for R10.
 * The circuit diagram says: Z1, C7, R35 only for 30V version
 
 Choosing the transformer
