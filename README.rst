@@ -93,14 +93,6 @@ It appears that I chose the 30V version when I sourced the
 transformer, but it seems that I chose the 22V version when sourcing
 the 3300 |micro| F reservoir capacitor.
 
-And it seems that I chose the 22V version when assembling the circuit
-board:
-
-* R10 is 4.7K |ohms|
-* Z1 has been replaced by a wire
-* C7 was not installed
-* R35 was not installed
-
 Primary Fuse
 ------------
 
