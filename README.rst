@@ -247,11 +247,21 @@ before sizing the enclosure.  Finding a good, cheap enclosure is a
 real PITA.  There is no way to specify your size ranges and get a list
 of matching items.  It doesn't help that there are no standard naming
 conventions; enclosure, junction box, instrument case, desktop,
-etc. all mean different things to the Asian suppliers.
+etc. all mean different things to each of the Asian suppliers.
 
 I eventually found `ST764 (7x3x5") DIY Hobby Electronic Metal Project
 Enclosure Box Case <http://www.ebay.com/itm/261615796293>`_ by
-Sunetec.
+Sunetec.  When it arrived, the interior dimensions were actually
+slightly larger at 7.25" x 5.625" x 3.375".
+
+At 195mm x 165mm x 90mm, this Blue Metal Enclosure Case DIY Power
+Junction Box (uxcell) for `$14 from Amazon
+<http://www.amazon.com/gp/product/B00P37E1YG>`_ should have worked,
+but it was unavailable.
+
+This `enclosure
+<http://www.circuitspecialists.com/metal-instrument-enclosure-la-6.html>`_
+also looked interesting, but with shipping it is fairly expensive.
 
 Front Panel Labels
 ------------------
