@@ -281,10 +281,6 @@ Additional Parts
 
 * large heat sink
 
-* PCB Mount Screw Terminal Block Connector, 3 pin, 2.54mm pitch (DC Power In)
-
-* PCB Mount Screw Terminal Block Connector, 2 pin, 3.5mm pitch, 10A (DC Power Out)
-
 * double binding posts (for banana jacks)
 
 * 1 female D-Sub DE-9 serial connector
