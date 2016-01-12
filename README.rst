@@ -317,6 +317,11 @@ GND        5      10
 The 5V (PWR) line is not connected because the ATMega8 gets its 5V
 power from the circuit board.
 
+`article 352`_ describes protection resistors for the MOSI, MISO, and
+SCK lines.  But I believe that these are related to the fact that
+`article 352`_ was describing a parallel port programmer interface,
+and that the Pocket AVR Programmer does not need such protection.
+
 R3 is a 10K |ohms| pull-up resistor between the RST pin and the
 positive power supply which prevents the ATMega8 from accidentally
 entering programming mode.
