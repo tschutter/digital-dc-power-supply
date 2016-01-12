@@ -311,7 +311,7 @@ RST        1       5
 MOSI       2       1
 MISO       3       9
 SCK        4       7
-GND        5       4
+GND        5      10
 ==== ======= =======
 
 The 5V (PWR) line is not connected because the ATMega8 gets its 5V
