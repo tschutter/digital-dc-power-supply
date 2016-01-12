@@ -49,9 +49,17 @@ output voltage.
   33.6V DC rectified and smoothed)
 * 2200 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
   per ampere)
-* R10 should be 5.6K |ohms|. Note that the circuit diagram shows 6.8K
-  |ohms|, but that appears to be an error given the text in `article
-  379`_.
+* R10 should be 6.8K |ohms| as indicated in the circuit diagram.  Note
+  that `article 379`_ states that R10 should be 5.7K |ohms|, but that
+  appears to be an error.  The microcontroller operates at 5V so the
+  maximum output of the DAC is 5V which means that the maximum output
+  voltage behind the power transistor will be 5.0 - 0.7 = 4.3V.  For
+  30V output we must at least amplify the 4.3V by a factor of 7.
+  According to `article 379`_, V\ :sub:`ampl` = (R10 + R11) / R11.
+  Given that R11 is 1.0K |ohms|, then the circuit diagram R10 value of
+  6.8K |ohms| would result in a V\ :sub:`ampl` of 7.8.  Since I don't
+  have a 6.8K |ohms| resistor, I used a 4.7K |ohms| resistor in series
+  with a 2.2K |ohms| resistor for R10.
 * The circuit diagram says: Z1, C7, R35 only for 30V version
 
 Choosing the transformer
@@ -84,14 +92,6 @@ Given a 24V transformer:
 It appears that I chose the 30V version when I sourced the
 transformer, but it seems that I chose the 22V version when sourcing
 the 3300 |micro| F reservoir capacitor.
-
-And it seems that I chose the 22V version when assembling the circuit
-board:
-
-* R10 is 4.7K |ohms|
-* Z1 has been replaced by a wire
-* C7 was not installed
-* R35 was not installed
 
 Primary Fuse
 ------------
@@ -247,11 +247,21 @@ before sizing the enclosure.  Finding a good, cheap enclosure is a
 real PITA.  There is no way to specify your size ranges and get a list
 of matching items.  It doesn't help that there are no standard naming
 conventions; enclosure, junction box, instrument case, desktop,
-etc. all mean different things to the Asian suppliers.
+etc. all mean different things to each of the Asian suppliers.
 
 I eventually found `ST764 (7x3x5") DIY Hobby Electronic Metal Project
 Enclosure Box Case <http://www.ebay.com/itm/261615796293>`_ by
-Sunetec.
+Sunetec.  When it arrived, the interior dimensions were actually
+slightly larger at 7.25" x 5.625" x 3.375".
+
+At 195mm x 165mm x 90mm, this Blue Metal Enclosure Case DIY Power
+Junction Box (uxcell) for `$14 from Amazon
+<http://www.amazon.com/gp/product/B00P37E1YG>`_ should have worked,
+but it was unavailable.
+
+This `enclosure
+<http://www.circuitspecialists.com/metal-instrument-enclosure-la-6.html>`_
+also looked interesting, but with shipping it is fairly expensive.
 
 Front Panel Labels
 ------------------
@@ -270,10 +280,6 @@ Additional Parts
 * power switch ripped from old computer PSU
 
 * large heat sink
-
-* PCB Mount Screw Terminal Block Connector, 3 pin, 2.54mm pitch (DC Power In)
-
-* PCB Mount Screw Terminal Block Connector, 2 pin, 3.5mm pitch (DC Power Out)
 
 * double binding posts (for banana jacks)
 
