@@ -296,17 +296,16 @@ adapter.  See the `Pocket AVR Programmer Hookup Guide
 One problem is that the power supply circuit board uses a non-standard
 5 pin in-line interface instead of the standard 2x3 header.
 
-I constructed a cable adapter:
+I constructed a special cable for use with the Pocket AVR Programmer:
 
 ==== ======= =======
-Line 2x3 pin 1x5 pin
+Line 1x5 pin 2x5 pin
 ==== ======= =======
-MISO       1       3
-5V         2     N/C
-SCK        3       4
-MOSI       4       2
-RST        5       1
-GND        6       5
+RST        1       5
+MOSI       2       1
+MISO       3       9
+SCK        4       7
+GND        5       4
 ==== ======= =======
 
 The 5V (PWR) line is not connected because the ATMega8 gets its 5V
