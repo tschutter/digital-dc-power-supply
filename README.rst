@@ -38,7 +38,7 @@ output voltage.
   25V DC rectified and smoothed)
 * 3000 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
   per ampere)
-* R10 should be 4.7K |ohms|
+* R10 should be 4.7K |ohm|
 * The circuit diagram says: replace Z1 by a wire for the 24V version
   (maybe typo, should be 22V?)
 
@@ -49,17 +49,17 @@ output voltage.
   33.6V DC rectified and smoothed)
 * 2200 |micro| F reservoir capacitor (reason: at least 1000 |micro| F
   per ampere)
-* R10 should be 6.8K |ohms| as indicated in the circuit diagram.  Note
-  that `article 379`_ states that R10 should be 5.7K |ohms|, but that
+* R10 should be 6.8K |ohm| as indicated in the circuit diagram.  Note
+  that `article 379`_ states that R10 should be 5.7K |ohm|, but that
   appears to be an error.  The microcontroller operates at 5V so the
   maximum output of the DAC is 5V which means that the maximum output
   voltage behind the power transistor will be 5.0 - 0.7 = 4.3V.  For
   30V output we must at least amplify the 4.3V by a factor of 7.
   According to `article 379`_, V\ :sub:`ampl` = (R10 + R11) / R11.
-  Given that R11 is 1.0K |ohms|, then the circuit diagram R10 value of
-  6.8K |ohms| would result in a V\ :sub:`ampl` of 7.8.  Since I don't
-  have a 6.8K |ohms| resistor, I used a 4.7K |ohms| resistor in series
-  with a 2.2K |ohms| resistor for R10.
+  Given that R11 is 1.0K |ohm|, then the circuit diagram R10 value of
+  6.8K |ohm| would result in a V\ :sub:`ampl` of 7.8.  Since I don't
+  have a 6.8K |ohm| resistor, I used a 4.7K |ohm| resistor in series
+  with a 2.2K |ohm| resistor for R10.
 * The circuit diagram says: Z1, C7, R35 only for 30V version
 
 Choosing the transformer
@@ -322,7 +322,7 @@ SCK lines.  But I believe that these are related to the fact that
 `article 352`_ was describing a parallel port programmer interface,
 and that the Pocket AVR Programmer does not need such protection.
 
-R3 is a 10K |ohms| pull-up resistor between the RST pin and the
+R3 is a 10K |ohm| pull-up resistor between the RST pin and the
 positive power supply which prevents the ATMega8 from accidentally
 entering programming mode.
 
@@ -363,7 +363,7 @@ These documents were delivered with the kit:
 .. reStructuredText definitions
 .. |euro| unicode:: 0x20AC .. copyright sign
    :rtrim:
-.. |ohms| unicode:: 0x03A9 .. Greek uppercase omega
+.. |ohm| unicode:: 0x03A9 .. Greek uppercase omega
    :ltrim:
 .. |micro| unicode:: 0x00B5 .. Greek lowercase mu
    :ltrim:
