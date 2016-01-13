@@ -356,7 +356,7 @@ updated since 2005-12-09, so I have local copies here:
 * `Part 2: The Software (LinuxFocus article 384) <doc/lf-2005_07-0384.pdf>`_
 * `Part 3: Command and Control from the PC (LinuxFocus article 389) <doc/lf-2005_09-0389.pdf>`_
 * `Programming the AVR microcontroller with GCC, libc 1.0.4 (LinuxFocus article 352) <doc/lf-2004_11-0352.pdf>`_
-* `Button layout <buttons.gif>`_
+* `Button layout <doc/buttons.gif>`_
 
 These documents were delivered with the kit:
 
