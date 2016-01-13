@@ -217,6 +217,9 @@ Pin Name
 CONN5 - Front Panel
 +++++++++++++++++++
 
+Front panel `buttons
+<http://tuxgraphics.org/common/images2/article10051/buttons.gif>`_.
+
 === ======================
 Pin Use
 === ======================
@@ -317,10 +320,10 @@ GND        5      10
 The 5V (PWR) line is not connected because the ATMega8 gets its 5V
 power from the circuit board.
 
-`article 352`_ describes protection resistors for the MOSI, MISO, and
-SCK lines.  But I believe that these are related to the fact that
-`article 352`_ was describing a parallel port programmer interface,
-and that the Pocket AVR Programmer does not need such protection.
+`Article 352`_ describes protection resistors for the MOSI, MISO, and
+SCK lines.  But I believe that these are related to the fact that the
+article was describing a parallel port programmer interface, and that
+the Pocket AVR Programmer does not need such protection.
 
 R3 is a 10K |ohm| pull-up resistor between the RST pin and the
 positive power supply which prevents the ATMega8 from accidentally
@@ -353,6 +356,7 @@ updated since 2005-12-09, so I have local copies here:
 * `Part 2: The Software (LinuxFocus article 384) <doc/lf-2005_07-0384.pdf>`_
 * `Part 3: Command and Control from the PC (LinuxFocus article 389) <doc/lf-2005_09-0389.pdf>`_
 * `Programming the AVR microcontroller with GCC, libc 1.0.4 (LinuxFocus article 352) <doc/lf-2004_11-0352.pdf>`_
+* `Button layout <buttons.gif>`_
 
 These documents were delivered with the kit:
 
