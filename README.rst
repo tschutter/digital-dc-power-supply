@@ -176,7 +176,9 @@ The `Hardware version 2.0
 <http://tuxgraphics.org/electronics/200707/bench-power-supply-unit.shtml>`_
 doc suggests soldering a ceramic capacitor in the range of 10 nF to
 100 nF directly behind the front output connectors to block HF signals
-from interfering with the LCD display electronics.
+from interfering with the LCD display electronics.  This suggestion is
+lacking from `Hardware version 3.0
+<http://www.tuxgraphics.org/electronics/201005/bench-power-supply-v3.shtml>`_.
 
 Connections
 -----------
@@ -184,13 +186,29 @@ Connections
 There are 6 sets of external connections on the main PCB labeled CONN1
 through CONN6.
 
+For the ribbon cables, I installed Molex connectors.  The terminators
+which crimp on the ribbon cable wires are a real PITA to install.  It
+gets easier about the time you do the last crimp. The best jaws to use
+on the crimper seemed to be 1.4mm for the conductors and 2.0mm for the
+insulation.  The male jaw should be placed on the closed bottom of the
+connector and the female jaw on the open top.  I think that it is
+easier to crimp the conductor before the insulation.  I also found it
+easier to do each crimp quickly instead of squeezing slowly.
+
+When connecting ribbon cables, each wire needs to be cut to a
+different length especially for cables with more wires.  I discovered
+that first splitting the wires and then passing them backwards through
+the connector housing made it easy to cut them to the correct length.
+
 CONN1 - PROG_LOAD
 +++++++++++++++++
 
-`SPI`_ programming interface to the ATMega8
+`SPI`_ programming interface to the ATmega8
+
+Pin 1 is on the South end of the connector on the circuit board.
 
 === ==== ===========
-Pin Name ATMega8 Pin
+Pin Name ATmega8 Pin
 === ==== ===========
   1 RST  PC6 (1)
   2 MOSI PB3 (17)
@@ -203,6 +221,8 @@ CONN2 - Remote Control
 ++++++++++++++++++++++
 
 I2C (serial) communication to PC
+
+Pin 1 is on the West end of the connector on the circuit board.
 
 === ==== ========
 Pin Name DE-9 Pin
@@ -218,8 +238,27 @@ CONN3 - LCD
 
 LCD Display (10 pins)
 
+Pin 1 is on the South end of the connector on the circuit board.
+
+=== ================ =============
+Pin Circuit Board    LCD Display
+=== ================ =============
+  1 ATmega8 PB7 (10) D7 (14)
+  2 ATmega8 PB2 (16) D6 (13)
+  3 ATmega8 PB1 (15) D5 (12)
+  4 ATmega8 PB0 (14) D4 (11)
+  5 ATmega8 PB4 (18) E (6)
+  6 GND              R/W (5)
+  7 ATmega8 PB6 (9)  RS (4)
+  8 GND              Vcontrast (3)
+  9 GND              GND (1)
+ 10 Vcc              Vcc (2)
+=== ================ =============
+
 CONN4 - DC Power Out
 ++++++++++++++++++++
+
+Pin 1 is on the South end of the connector on the circuit board.
 
 === ==============
 Pin Name
@@ -231,8 +270,7 @@ Pin Name
 CONN5 - Front Panel
 +++++++++++++++++++
 
-Front panel `buttons
-<http://tuxgraphics.org/common/images2/article10051/buttons.gif>`_.
+Pin 1 on the circuit board is on the South end of the connector.
 
 === ======================
 Pin Use
@@ -245,8 +283,13 @@ Pin Use
   6 S5 Store
 === ======================
 
+Front panel `buttons
+<http://tuxgraphics.org/common/images2/article10051/buttons.gif>`_.
+
 CONN6 - DC Power In
 +++++++++++++++++++
+
+Pin 1 is on the North end of the connector on the circuit board.
 
 === ========
 Pin Name
@@ -292,6 +335,10 @@ careful, but soon it was obvious that it was impossible to not mar the
 paint, especially when using the sheet metal nibbler on the square
 holes.  I resigned myself to repainting the enclosure when I was done.
 
+The best way to make the edges of the rectangular holes straight was
+to use a flat bastard file.  Using the Dremel here doesn't work well
+at all.
+
 Front Panel Labels
 ++++++++++++++++++
 
@@ -318,10 +365,10 @@ Additional Parts
   often `mislabeled <https://en.wikipedia.org/wiki/D-subminiature>`_
   as DB-9 instead of DE-9 connectors.
 
-Programming the ATMega8
+Programming the ATmega8
 =======================
 
-The ATMega8 is programmed using a `SPI`_ (Serial Peripheral Interface).
+The ATmega8 is programmed using a `SPI`_ (Serial Peripheral Interface).
 
 I purchased the `Sparkfun Pocket AVR Programmer
 <https://www.sparkfun.com/products/9825>`_ which is an USB to SPI host
@@ -343,7 +390,7 @@ SCK        4       7
 GND        5      10
 ==== ======= =======
 
-The 5V (PWR) line is not connected because the ATMega8 gets its 5V
+The 5V (PWR) line is not connected because the ATmega8 gets its 5V
 power from the circuit board.
 
 `Article 352`_ describes protection resistors for the MOSI, MISO, and
@@ -352,7 +399,7 @@ article was describing a parallel port programmer interface, and that
 the Pocket AVR Programmer does not need such protection.
 
 R3 is a 10K |ohm| pull-up resistor between the RST pin and the
-positive power supply which prevents the ATMega8 from accidentally
+positive power supply which prevents the ATmega8 from accidentally
 entering programming mode.
 
 Software
