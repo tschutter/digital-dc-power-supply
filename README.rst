@@ -22,6 +22,29 @@ Build Notes and Decisions
 The 1.0 kit documentation left many choices unclear or up to the
 reader.
 
+Primary Fuse
+------------
+
+None of the kit documentation indicated the need for a fuse, but it
+sounded like a good idea.
+
+* Choosing the fuse rating is notoriously difficult.
+* The fuse should come *before* the switch.  This guards against the
+  possibility of the switch failing closed.
+* From `Fuses and Fusing @ The Valve Wizard
+  <http://www.valvewizard.co.uk/fuses.html>`_:
+
+  * The primary fuse should be rated for around 1.5 to 2 times the
+    normal primary operating current. You can work this out by adding
+    up the (maximum average) power used by each of the secondary
+    windings, then divide by the mains voltage.
+  * 1A is typical of most amps up to 60W.
+* Normally, you size to protect the transformer.
+
+The transformer rated current = 48VA / 115V = 0.42A.  A slow-blow fuse
+of 1A is 2 times the maximum primary operating current and should
+allow for transformer inrush current.
+
 Power Supply Transformer
 ------------------------
 
@@ -62,7 +85,7 @@ output voltage.
   with a 2.2K |ohm| resistor for R10.
 * The circuit diagram says: Z1, C7, R35 only for 30V version
 
-Choosing the transformer
+Choosing the Transformer
 ++++++++++++++++++++++++
 
 I chose a `Triad F-192X Power Transformer
@@ -92,29 +115,6 @@ Given a 24V transformer:
 It appears that I chose the 30V version when I sourced the
 transformer, but it seems that I chose the 22V version when sourcing
 the 3300 |micro| F reservoir capacitor.
-
-Primary Fuse
-------------
-
-None of the kit documentation indicated the need for a fuse, but it
-sounded like a good idea.
-
-* Choosing the fuse rating is notoriously difficult.
-* The fuse should come *before* the switch.  This guards against the
-  possibility of the switch failing closed.
-* From `Fuses and Fusing @ The Valve Wizard
-  <http://www.valvewizard.co.uk/fuses.html>`_:
-
-  * The primary fuse should be rated for around 1.5 to 2 times the
-    normal primary operating current. You can work this out by adding
-    up the (maximum average) power used by each of the secondary
-    windings, then divide by the mains voltage.
-  * 1A is typical of most amps up to 60W.
-* Normally, you size to protect the transformer.
-
-The transformer rated current = 48VA / 115V = 0.42A.  A slow-blow fuse
-of 1A is 2 times the maximum primary operating current and should
-allow for transformer inrush current.
 
 Rectifier
 ---------
@@ -154,6 +154,20 @@ calculated as:
 The frequency is 60Hz, so at the maximum current draw of 2.0A, a 3300
 |micro| F capacitor results in a peak-to-peak ripple voltage of 5.5V.
 This is higher than I would expect, but apparently it works.
+
+Power Indicator LED
+-------------------
+
+There is no way that the front panel LCD display will be enough to
+indicate to me that I have left the power supply on when leaving the
+shop.  I need something a bit more obvious.  So I chose to add a power
+indicator LED just to the right of the power switch.  I connected it
+to the DC side of the rectifier (30V).  Playing around with a 3mm red
+LED on a breadboard, I determined that it has a |V_F| of 2.3V and
+supplying 0.02A of current results in a reasonable brightness.  The
+ideal current limiting resistor would therefore be (30V - 2.3V) /
+0.02A = 1385 |ohm|.  Therefore I placed a 1.2k |ohm| resistor inline
+with the LED.
 
 HF Interference
 ---------------
@@ -245,6 +259,9 @@ Pin Name
 Enclosure
 ---------
 
+Selecting the Enclosure
++++++++++++++++++++++++
+
 When selecting an enclosure, you *must* actually layout the components
 before sizing the enclosure.  Finding a good, cheap enclosure is a
 real PITA.  There is no way to specify your size ranges and get a list
@@ -266,8 +283,17 @@ This `enclosure
 <http://www.circuitspecialists.com/metal-instrument-enclosure-la-6.html>`_
 also looked interesting, but with shipping it is fairly expensive.
 
+Cutting the Enclosure
++++++++++++++++++++++
+
+As a perfectionist, the most stressful part of this project is cutting
+and drilling all of the holes in the enclosure!  I tried to be
+careful, but soon it was obvious that it was impossible to not mar the
+paint, especially when using the sheet metal nibbler on the square
+holes.  I resigned myself to repainting the enclosure when I was done.
+
 Front Panel Labels
-------------------
+++++++++++++++++++
 
 For voltage, 'U' seems to be the European preference and 'V' the
 preference in the U.S..  Therefore I chose 'V' for the front panel
