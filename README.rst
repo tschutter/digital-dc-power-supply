@@ -2,10 +2,13 @@ Digital DC Power Supply
 =======================
 
 This repository contains all documentation and files related to the
-digital DC bench power supply kit that I have built.  I purchased the
-kit (including a LCD display and three `ATmega8
+digital DC bench power supply kit that I have built.
+
+I purchased the kit (including a LCD display and three `ATmega8
 <http://www.atmel.com/devices/ATMEGA8.aspx>`_ microcontrollers) from
-tuxgraphics.org in October 2006 for |euro| 40.
+tuxgraphics.org in October 2006 for |euro| 40.  Due to life events,
+this project got pushed to the back of workbench and didn't get picked
+up until 9 years later.  But it is getting completed!
 
 As of 2015-12-12, there are three separate hardware versions.  I have
 hardware version 1.0 which is documented at `linuxfocus.org
@@ -169,6 +172,13 @@ ideal current limiting resistor would therefore be (30V - 2.3V) /
 0.02A = 1385 |ohm|.  Therefore I placed a 1.2k |ohm| resistor inline
 with the LED.
 
+One small problem.  It turns out that the reservoir capacitor drives
+the LED after turning the power supply off.  It takes a minute or two
+for the LED to totally turn off.
+
+In hindsight, I could have just relocated the indicator LED D1 on the
+circuit board to the front panel.
+
 HF Interference
 ---------------
 
@@ -295,8 +305,8 @@ Pin 1 is on the North end of the connector on the circuit board.
 Pin Name
 === ========
   1 Positive
-  2 Ground
-  3 Negative
+  2 Negative
+  3 Ground
 === ========
 
 Enclosure
@@ -356,6 +366,10 @@ Additional Parts
 * power switch ripped from old computer PSU
 
 * large heat sink
+
+* PCB Mount Screw Terminal Block Connector, 3 pin, 2.54mm pitch (DC Power In)
+
+* PCB Mount Screw Terminal Block Connector, 2 pin, 3.5mm pitch (DC Power Out)
 
 * double binding posts (for banana jacks)
 
