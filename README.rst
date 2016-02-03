@@ -1,14 +1,16 @@
 Digital DC Power Supply
 =======================
 
-This repository contains all documentation and files related to the
-digital DC bench power supply kit that I have built.
+This repository contains all documentation and files related to the DC
+bench power supply kit that I have built.
 
 I purchased the kit (including a LCD display and three `ATmega8
 <http://www.atmel.com/devices/ATMEGA8.aspx>`_ microcontrollers) from
-tuxgraphics.org in October 2006 for |euro| 40.  Due to life events,
-this project got pushed to the back of workbench and didn't get picked
-up until 9 years later.  But it is getting completed!
+`tuxgraphics.org
+<http://shop.tuxgraphics.org/electronic/detail_microcontroller_powersupply.html>`_
+in October 2006 for |euro| 40.  Due to life events, this project got
+pushed to the back of workbench and didn't get picked up until 9 years
+later.  But it is getting completed!
 
 As of 2015-12-12, there are three separate hardware versions.  I have
 hardware version 1.0 which is documented at `linuxfocus.org
